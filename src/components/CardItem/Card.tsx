@@ -8,7 +8,7 @@ import { ScAuthor } from "../../templates/styled";
 
 const ScMain = styled.div`
   max-width: 500px;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 992px) {
     margin-left: 24px;

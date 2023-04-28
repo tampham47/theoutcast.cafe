@@ -26,6 +26,8 @@ const ScMain = styled.div`
 
 const ScContent = styled.div`
   max-width: 768px;
+  font-size: 17px;
+  line-height: 1.4;
 `;
 
 const ScMenuList = styled.div`
@@ -124,18 +126,23 @@ const BlogTemplate = ({ data }: any) => {
           <ScMain>
             <ScContent>
               <p>
-                The outcast là một điểm đến lý tưởng cho những ai yêu thích
-                hương vị đậm đà của Yellow Bourbon, Marou Socola, Rượu Vang và
-                thích thú với mùi hương đặc trưng của Shisha. Ngoài ra, quán còn
-                có những chú mèo đáng yêu và thân thiện, sẵn sàng đón chào và
-                cùng bạn tận hưởng không gian thoải mái, ấm áp.
+                The outcast là một trạm dừng chân, dành cho những ai thích các
+                vị đồ uống vị nguyên bản nhất. Ở đây chúng tôi có cafe pour,
+                espresso sữa, marou cacao, rượu vang, bia thủ công. Tất cả các
+                nguyên liệu đều được trồng và chọn lọc và chế biến hoàn toàn ở
+                Việt Nam, từ những đối tác uy tín.
               </p>
               <p>
-                Với kiến trúc đẹp mắt và nhiều góc nhìn tuyệt vời, quán cà phê
-                chúng tôi là một điểm đến thú vị và độc đáo cho những người yêu
-                thích cà phê và muốn trải nghiệm những điều mới mẻ trong cuộc
-                sống hàng ngày. Hãy ghé thăm quán cà phê của chúng tôi và tận
-                hưởng những trải nghiệm tuyệt vời mà chúng tôi đem đến!
+                Với kiến trúc đẹp mắt và nhiều góc nhìn tuyệt vời, the outcast
+                là một điểm đến thú vị và độc đáo cho những người yêu thích cà
+                phê và muốn trải nghiệm những điều mới mẻ trong cuộc sống hàng
+                ngày.
+              </p>
+              <p>
+                Hơn nữa, quán còn có những chú mèo đáng yêu và thân thiện, sẵn
+                sàng đón chào và cùng bạn tận hưởng không gian thoải mái, ấm áp.
+                Hãy ghé thăm the outcast và chia sẻ những điều mới mẻ với mình
+                nhé.
               </p>
             </ScContent>
           </ScMain>

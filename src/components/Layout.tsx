@@ -10,6 +10,7 @@ import "../css/normalize.css";
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 16px;
+    line-height: 1.4;
   }
 
   body {

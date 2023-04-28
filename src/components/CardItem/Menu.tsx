@@ -8,7 +8,7 @@ import { ScAuthor } from "../../templates/styled";
 
 const ScMain = styled.div`
   max-width: 500px;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 992px) {
     margin-left: 12px;
@@ -49,6 +49,8 @@ const ScPanelContent = styled.div``;
 const ScTitle = styled.h6`
   font-size: 16px;
   margin-bottom: 0;
+  margin-top: 16px;
+  margin-top: 12px;
 
   a {
     color: white;
