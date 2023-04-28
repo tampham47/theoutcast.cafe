@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 
-import { Card } from "../components/Card";
+import { Card } from "../components/CardItem/Card";
 import { Container } from "../components/Grid";
 import { Layout } from "../components/Layout";
 import { graphql } from "gatsby";
@@ -65,6 +65,7 @@ export const pageQuery = graphql`
             category {
               name
             }
+            price
             cover {
               file {
                 url
@@ -107,9 +108,11 @@ const BlogTemplate = ({ data }: any) => {
         <Container>
           <ScMain>
             <ScPostList>
-              {posts.map((i) => (
-                <Card key={i.id} post={i} />
-              ))}
+              {posts
+                .filter((i) => i.category === "Blog")
+                .map((i) => (
+                  <Card key={i.id} post={i} />
+                ))}
             </ScPostList>
           </ScMain>
         </Container>

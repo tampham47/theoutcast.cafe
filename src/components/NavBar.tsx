@@ -55,8 +55,8 @@ const ScLinkComp = css`
   &:hover {
     text-decoration: none;
     opacity: 0.75;
-    color: #d8e9a8;
-    background: #1e5128;
+    color: #0b0b0f;
+    background: #ffd56f;
   }
 
   > span {
@@ -83,10 +83,10 @@ export const NavBar = () => {
         <Container>
           <ScNavBar>
             <ScLogo to="/">
-              <img src="/images/icon.png" loading="eager" />
-              Gatsby
+              <img src="/images/cat-in-black-silhouette.png" loading="eager" />
+              the-outcast
             </ScLogo>
-            <ScNavLink to="/blog/">Blog</ScNavLink>
+            <ScNavLink to="/blog/">blog</ScNavLink>
           </ScNavBar>
         </Container>
       </ScHeader>

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-import { Post } from "../types/Post";
-import { ScAuthor } from "../templates/styled";
+import { Post } from "../../types/Post";
+import { ScAuthor } from "../../templates/styled";
 
 const ScMain = styled.div`
   max-width: 500px;

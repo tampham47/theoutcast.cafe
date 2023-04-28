@@ -79,6 +79,7 @@ export const createPages = ({ actions, graphql }: any) => {
               category {
                 name
               }
+              price
               cover {
                 file {
                   url
