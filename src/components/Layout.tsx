@@ -77,13 +77,13 @@ export const Layout = ({ children }: React.PropsWithChildren<{}>) => {
         <meta property="og:title" content={name} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={link} />
-        <meta property="og:image" content="/tw-social.png" />
+        <meta property="og:image" content="/the-outcast.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={name} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content={link} />
-        <meta name="twitter:image" content="/tw-social.png" />
+        <meta name="twitter:image" content="/the-outcast.jpg" />
         <meta name="twitter:site" content={name} />
         <meta property="og:image:width" content="1500" />
         <meta property="og:image:height" content="500" />
