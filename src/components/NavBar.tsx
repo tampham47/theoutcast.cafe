@@ -39,7 +39,7 @@ const ScLogo = styled(Link)`
 
 const ScLinkComp = css`
   color: #f7f8f8;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   line-height: 40px;
   transition: all 0.3s;

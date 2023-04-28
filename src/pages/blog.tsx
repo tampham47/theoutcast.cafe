@@ -101,7 +101,7 @@ const BlogTemplate = ({ data }: any) => {
   return (
     <Layout>
       <ScRoot>
-        <Helmet titleTemplate="%s">
+        <Helmet titleTemplate="%s | the-outcast">
           <title>Blog</title>
         </Helmet>
 

@@ -26,7 +26,7 @@ const ScMain = styled.div`
 
 const ScContent = styled.div`
   max-width: 768px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4;
 `;
 
@@ -119,7 +119,7 @@ const BlogTemplate = ({ data }: any) => {
     <Layout>
       <ScRoot>
         <Helmet titleTemplate="%s">
-          <title>Gatsby</title>
+          <title>the-outcast</title>
         </Helmet>
 
         <Container>

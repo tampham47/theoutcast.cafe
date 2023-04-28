@@ -36,7 +36,7 @@ const PostTemplate = ({ data }: any) => {
   const { frontmatter: frontmatterSrc, html } = markdownRemark;
   const frontmatter = normalizeNotionFrontMatter(frontmatterSrc);
   const cover = frontmatter.cover;
-  const link = `https://example.com/blog/${frontmatter.slug}`;
+  const link = `https://theoutcast.cafe/blog/${frontmatter.slug}`;
 
   return (
     <Layout>
