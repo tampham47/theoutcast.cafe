@@ -102,15 +102,15 @@ const BlogTemplate = ({ data }: any) => {
     <Layout>
       <ScRoot>
         <Helmet titleTemplate="%s">
-          <title>Blog</title>
+          <title>Sự kiện</title>
         </Helmet>
 
         <Container>
-          <h2>Blog</h2>
+          <h2>Sự kiện</h2>
           <ScMain>
             <ScPostList>
               {posts
-                .filter((i) => i.category === "Blog")
+                .filter((i) => i.category === "Event")
                 .map((i) => (
                   <Card key={i.id} post={i} />
                 ))}

@@ -24,9 +24,10 @@ const ScLogo = styled(Link)`
   display: flex;
   align-items: center;
   font-weight: bold;
-  margin-right: 24px;
+  margin-right: 12px;
 
   img {
+    width: 32px;
     height: 32px;
     margin-right: 8px;
   }
@@ -41,16 +42,15 @@ const ScLinkComp = css`
   font-size: 14px;
   line-height: 1.4;
   line-height: 40px;
-  margin-right: 24px;
   transition: all 0.3s;
   display: block;
   user-select: none;
-  font-weight: bold;
   height: 40px;
   line-height: 40px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-radius: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  margin-right: 4px;
 
   &:hover {
     text-decoration: none;
@@ -86,6 +86,7 @@ export const NavBar = () => {
               <img src="/images/cat-in-black-silhouette.png" loading="eager" />
               the-outcast
             </ScLogo>
+            <ScNavLink to="/event/">sự kiện</ScNavLink>
             <ScNavLink to="/blog/">blog</ScNavLink>
           </ScNavBar>
         </Container>
