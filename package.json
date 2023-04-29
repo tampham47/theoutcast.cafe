@@ -13,7 +13,9 @@
     "build": "env-cmd -f .env gatsby build",
     "serve": "env-cmd -f .env gatsby serve",
     "clean": "env-cmd -f .env gatsby clean",
+    "build:prod": "gatsby build",
     "deploy": "yarn run clean && yarn run build && surge ./public https://theoutcast-cafe.surge.sh",
+    "teardown": "surge teardown https://theoutcast-cafe.surge.sh",
     "typecheck": "tsc --noEmit"
   },
   "license": "0BSD",
