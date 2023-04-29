@@ -66,7 +66,7 @@ const PostTemplate = ({ data }: any) => {
               />
             </ScFeature>
 
-            <ScContent className="post-full-content">
+            <ScContent>
               <div
                 className="post-content"
                 dangerouslySetInnerHTML={{ __html: html }}

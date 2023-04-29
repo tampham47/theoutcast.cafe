@@ -86,7 +86,7 @@ export const ScContent = styled.section`
   }
 
   a {
-    color: #bfff00;
+    color: #ffd56f;
   }
 
   table {

@@ -8,6 +8,12 @@ import { Container } from "../components/Grid";
 import { Layout } from "../components/Layout";
 import { normalizeNotionFrontMatter } from "../utils/normalizeNotionBlog";
 import { Menu } from "../components/CardItem/Menu";
+import { ScContent as ScContentSrc } from "../templates/styled";
+
+const ScContent = styled(ScContentSrc)`
+  margin-left: initial;
+  max-width: 780px;
+`;
 
 const ScRoot = styled.div`
   background-color: var(--darkmode);
@@ -22,12 +28,6 @@ const ScMain = styled.div`
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
-`;
-
-const ScContent = styled.div`
-  max-width: 768px;
-  font-size: 16px;
-  line-height: 1.4;
 `;
 
 const ScMenuList = styled.div`
@@ -56,6 +56,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          html
           featuredImg {
             childImageSharp {
               fluid(maxWidth: 800, quality: 100) {
@@ -101,8 +102,6 @@ export const pageQuery = graphql`
 `;
 
 const BlogTemplate = ({ data }: any) => {
-  console.log("data", data);
-
   const posts: any[] = data.allMarkdownRemark.edges
     .map(({ node }: any) => {
       const frontmatter = normalizeNotionFrontMatter(node.frontmatter);
@@ -115,6 +114,9 @@ const BlogTemplate = ({ data }: any) => {
     })
     .filter((i: any) => i.status === "published");
 
+  const introPost = posts.find((i) => i.slug === "x-the-outcast");
+  const contactPost = posts.find((i) => i.slug === "x-contact");
+
   return (
     <Layout>
       <ScRoot>
@@ -125,25 +127,10 @@ const BlogTemplate = ({ data }: any) => {
         <Container>
           <ScMain>
             <ScContent>
-              <p>
-                The outcast là một trạm dừng chân, dành cho những ai thích các
-                vị đồ uống vị nguyên bản nhất. Ở đây chúng tôi có cafe pour,
-                espresso sữa, marou cacao, rượu vang, bia thủ công. Tất cả các
-                nguyên liệu đều được trồng và chọn lọc và chế biến hoàn toàn ở
-                Việt Nam, từ những đối tác uy tín.
-              </p>
-              <p>
-                Với kiến trúc đẹp mắt và nhiều góc nhìn tuyệt vời, the outcast
-                là một điểm đến thú vị và độc đáo cho những người yêu thích cà
-                phê và muốn trải nghiệm những điều mới mẻ trong cuộc sống hàng
-                ngày.
-              </p>
-              <p>
-                Hơn nữa, quán còn có những chú mèo đáng yêu và thân thiện, sẵn
-                sàng đón chào và cùng bạn tận hưởng không gian thoải mái, ấm áp.
-                Hãy ghé thăm the outcast và chia sẻ những điều mới mẻ với mình
-                nhé.
-              </p>
+              <div
+                className="post-content"
+                dangerouslySetInnerHTML={{ __html: introPost.html }}
+              />
             </ScContent>
           </ScMain>
         </Container>
@@ -156,7 +143,7 @@ const BlogTemplate = ({ data }: any) => {
                 .filter((i) => i.category === "Menu")
                 .sort((a, b) => a.order - b.order)
                 .map((i) => (
-                  <Menu key={i.id} post={i} />
+                  <Menu key={i.slug} post={i} />
                 ))}
             </ScMenuList>
           </ScMain>
@@ -169,9 +156,20 @@ const BlogTemplate = ({ data }: any) => {
               {posts
                 .filter((i) => i.category === "Blog")
                 .map((i) => (
-                  <Card key={i.id} post={i} />
+                  <Card key={i.slug} post={i} />
                 ))}
             </ScBlogList>
+          </ScMain>
+        </Container>
+
+        <Container>
+          <ScMain>
+            <ScContent>
+              <div
+                className="post-content"
+                dangerouslySetInnerHTML={{ __html: contactPost.html }}
+              />
+            </ScContent>
           </ScMain>
         </Container>
       </ScRoot>
