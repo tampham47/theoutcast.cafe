@@ -78,7 +78,7 @@ export const ScContent = styled.section`
   p {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   img {
