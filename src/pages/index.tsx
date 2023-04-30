@@ -161,15 +161,6 @@ const BlogTemplate = ({ data }: any) => {
             </ScBlogList>
           </ScMain>
         </Container>
-
-        <Container>
-          <ScContent>
-            <div
-              className="post-content"
-              dangerouslySetInnerHTML={{ __html: contactPost.html }}
-            />
-          </ScContent>
-        </Container>
       </ScRoot>
     </Layout>
   );
