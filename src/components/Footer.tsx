@@ -115,6 +115,8 @@ export const Footer = () => {
 
         const contactPost = posts.find((i) => i.slug === "x-contact");
         const servicePost = posts.find((i) => i.slug === "x-service");
+        const partnerPost = posts.find((i) => i.slug === "x-partners");
+        console.log("partnerPost", partnerPost);
 
         return (
           <ScMain>
@@ -136,6 +138,16 @@ export const Footer = () => {
                       className="post-content"
                       dangerouslySetInnerHTML={{
                         __html: servicePost?.html ?? "",
+                      }}
+                    />
+                  </ScContent>
+                </div>
+                <div>
+                  <ScContent>
+                    <div
+                      className="post-content"
+                      dangerouslySetInnerHTML={{
+                        __html: partnerPost?.html ?? "",
                       }}
                     />
                   </ScContent>
