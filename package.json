@@ -14,7 +14,7 @@
     "serve": "env-cmd -f .env gatsby serve",
     "clean": "env-cmd -f .env gatsby clean",
     "build:prod": "gatsby build",
-    "surge:deploy": "yarn run clean && yarn run build && surge ./public https://theoutcast-cafe.surge.sh",
+    "surge:deploy": "yarn run clean && yarn run build && surge ./public https://theoutcastcafe.surge.sh",
     "surge:teardown": "surge teardown https://theoutcast-cafe.surge.sh",
     "netlify:build": "curl -X POST -d {} https://api.netlify.com/build_hooks/644cc1aaff7a0d63d919de7d",
     "typecheck": "tsc --noEmit"
